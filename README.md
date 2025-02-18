@@ -1,4 +1,5 @@
-SetPreventTransmit improvements
+SetPreventTransmit improvements.
+
 Fully backwards compatible
 
 
