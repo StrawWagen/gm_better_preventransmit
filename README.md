@@ -1,24 +1,21 @@
-SetPreventTransmit improvements.
-
-Fully backwards compatible
+Framework for SetPreventTransmit to be used by multiple projects without conflicting.
+- Works by creating lists of "reasons" for one entity to not be transmitted to a player
+- If the list has more than one member, no transmit.
 
 
 To use...
-
-( Preventing transmit )
-ent:AddPreventTransmitReason( player, "myUniqueReason" )
-
-( un-Preventing transmit )
-ent:RemovePreventTransmitReason( player, "myUniqueReason" )
+- ent:AddPreventTransmitReason( player, "myUniqueReason" )
+    - Prevents transmit
+- ent:RemovePreventTransmitReason( player, "myUniqueReason" )
+    - Stops preventing transmit
 
 
 Extra util funcs
 
-( all reasons check, also returns reasons tbl )
-bool isPrevented, tbl allReasons = ent:GetPreventTransmit( ply )
-
-( single reason check )
-bool hasReason = ent:HasPreventTransmitReason( ply, "myUniqueReason" )
+- bool isPrevented, tbl allReasons = ent:GetPreventTransmit( ply )
+    - all reasons check, also returns "reasons" tbl
+- bool hasReason = ent:HasPreventTransmitReason( ply, "myUniqueReason" )
+    - single reason check
 
 
 Handles backwards compatibility by just adding/removing a "generic" reason when SetPreventTransmit is called
