@@ -8,6 +8,8 @@ To use...
     - Prevents transmit
 - ent:RemovePreventTransmitReason( player, "myUniqueReason" )
     - Stops preventing transmit
+- ent:SetPreventTransmitReason( player, "myUniqueReason" )
+    - drop-in replacement for GetPreventTransmit
 
 
 Extra util funcs
