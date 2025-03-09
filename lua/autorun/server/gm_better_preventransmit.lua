@@ -80,11 +80,11 @@ function entMeta:RemovePreventTransmitReason( ply, reason )
 end
 
 -- drop-in replacement
-function entMeta:SetPreventTransmitReason( ply, reason )
+function entMeta:SetPreventTransmitReason( ply, state, reason )
     local myTbl = entMeta.GetTable( self )
     local preventTransmitReasonsForPly = getPreventTransmitReasonsForPly( myTbl, ply )
 
-    if reason == true then
+    if state == true then
         preventTransmitReasonsForPly[reason] = true
 
     else -- so it works with nil or false
