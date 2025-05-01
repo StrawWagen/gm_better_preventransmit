@@ -9,7 +9,7 @@ To use...
 - ent:RemovePreventTransmitReason( player, "myUniqueReason" )
     - Stops preventing transmit
 - ent:SetPreventTransmitReason( player, state, "myUniqueReason" )
-    - drop-in replacement for GetPreventTransmit
+    - drop-in replacement for SetPreventTransmit
 
 
 Extra util funcs
